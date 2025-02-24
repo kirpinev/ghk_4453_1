@@ -35,6 +35,7 @@ export const App = () => {
     <>
       <div className={appSt.container}>
         <div className={appSt.box}>
+          <Gap size={16} />
           <Typography.TitleResponsive
             tag="h1"
             view="medium"
@@ -46,11 +47,11 @@ export const App = () => {
           <Typography.Text view="primary-medium" color="secondary">
             Работает в тестовом режиме
           </Typography.Text>
-          <Gap size={16} />
+          <Gap size={24} />
           <img src={image_growthhack} alt="Картинка АИ" width={80} />
         </div>
 
-        <Gap size={16} />
+        <Gap size={32} />
 
         <div className={appSt.products}>
           <Comment>
