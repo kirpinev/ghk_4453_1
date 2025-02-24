@@ -9,7 +9,6 @@ import { useState } from "react";
 import { BottomSheet } from "@alfalab/core-components/bottom-sheet";
 import { List } from "@alfalab/core-components/list";
 import { Comment } from "@alfalab/core-components/comment";
-import { Link } from "@alfalab/core-components/link";
 
 const Redirect = () => {
   window.location.replace("https://alfabank.ru/");
@@ -169,11 +168,6 @@ export const App = () => {
         <ButtonMobile block view="primary" onClick={() => setWarning(true)}>
           Подключить
         </ButtonMobile>
-        <Gap size={8} />
-        <Typography.Text view="primary-medium" color="secondary">
-          Продолжая, вы соглашаетесь с
-        </Typography.Text>{" "}
-        <Link onClick={() => setExpanded(true)}>правилами использования.</Link>
       </div>
     </>
   );
