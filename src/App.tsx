@@ -47,7 +47,9 @@ export const App = () => {
           <Typography.Text view="primary-medium" color="secondary">
             Работает в тестовом режиме
           </Typography.Text>
+
           <Gap size={24} />
+
           <img src={image_growthhack} alt="Картинка АИ" width={80} />
         </div>
 

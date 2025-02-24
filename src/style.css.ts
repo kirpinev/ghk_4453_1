@@ -15,7 +15,6 @@ const box = style({
   borderRadius: "24px",
   overflow: "hidden",
   textAlign: "center",
-  paddingBottom: "1rem",
 });
 
 const subscription = style({
