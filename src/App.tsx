@@ -10,13 +10,14 @@ import { BottomSheet } from "@alfalab/core-components/bottom-sheet";
 import { List } from "@alfalab/core-components/list";
 import { Comment } from "@alfalab/core-components/comment";
 
-const aiLink = "alfabank://configurable_chat?sourceChannelId=AI4_CHAT&navigationTitle=%D0%90%D0%BB%D1%8C%D1%84%D0%B0-%D0%90%D1%81%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BD%D1%82&attachmentsPickerEnabled=false&suggestionsEnabled=false&welcomeMessageEnabled=false&voiceMessageEnabled=false&quotesEnabled=false"
+const aiLink =
+  "alfabank://configurable_chat?sourceChannelId=AI4_CHAT&navigationTitle=%D0%90%D0%BB%D1%8C%D1%84%D0%B0-%D0%90%D1%81%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BD%D1%82&attachmentsPickerEnabled=false&suggestionsEnabled=false&welcomeMessageEnabled=false&voiceMessageEnabled=false&quotesEnabled=false";
 
-// const Redirect = () => {
-//   window.location.replace(aiLink);
-//
-//   return null;
-// };
+const Redirect = () => {
+  window.location.href = aiLink;
+
+  return null;
+};
 
 export const App = () => {
   const [thxShow, setThx] = useState(LS.getItem(LSKeys.ShowThx, false));
@@ -29,16 +30,7 @@ export const App = () => {
   };
 
   if (thxShow) {
-    // return <Redirect />;
-
-    return <ButtonMobile
-        block
-        view="primary"
-        onClick={submit}
-        href={aiLink}
-    >
-      Понятно, продолжить
-    </ButtonMobile>
+    return <Redirect />;
   }
 
   return (
@@ -92,12 +84,7 @@ export const App = () => {
         onClose={() => setWarning(false)}
         title="Внимание!"
         actionButton={
-          <ButtonMobile
-            block
-            view="primary"
-            onClick={submit}
-            href={aiLink}
-          >
+          <ButtonMobile block view="primary" onClick={submit} href={aiLink}>
             Понятно, продолжить
           </ButtonMobile>
         }
